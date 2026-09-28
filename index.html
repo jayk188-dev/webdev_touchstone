@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery - Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -15,20 +22,32 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-	<h1>Welcome to North Star Bakery!</h1>
+        <h1>Welcome to North Star Bakery!</h1>
     </header>
+
     <main>
-        <p>Proud to serve our community with fresh baked goods made daily. We're known for fresh bread, locally-sourced ingredients, and affordable prices.</p>
-	<h2>Hours</h2>
-	<p> Mon-Sat, 9AM - 6PM, Closed Sunday </p>
-	<h2>Featured Item</h2>
-	<p> Sourdough Loaf</p>
-	<picture>
-            <source media="(min-width: 600px)" srcset="bakery-bread_c.png" width="600">
-            <source media="(min-width: 400px)" srcset="bakery-feature-small_c.png">	
-            <img src="bakery-feature-large_c.png" alt="A glass display case filled with artisanal breads and baked pastries.">
-        </picture>
+        <section>
+            <p>Proud to serve our community with fresh baked goods made daily. We're known for fresh bread, locally-sourced ingredients, and affordable prices.</p>
+        </section>
+
+        <div class="content-grid">
+            <section>
+                <h2>Hours</h2>
+                <p>Mon-Sat, 9AM - 6PM<br>Closed Sunday</p>
+            </section>
+
+            <section>
+                <h2>Featured Item</h2>
+                <p><strong>Sourdough Loaf</strong></p>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="bakery-bread_c.png">
+                    <source media="(min-width: 400px)" srcset="bakery-feature-small_c.png"> 
+                    <img src="bakery-feature-large_c.png" alt="A glass display case filled with artisanal breads and baked pastries." style="max-width: 100%; height: auto;">
+                </picture>
+            </section>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2026 North Star Bakery</p>
     </footer>

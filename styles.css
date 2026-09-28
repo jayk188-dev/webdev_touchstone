@@ -1,0 +1,241 @@
+/* ==========================================================
+   CSS DESIGN SYSTEM & RESPONSIVE LAYOUT (styles.css)
+   Target Limits: 3 Colors | 2 Fonts | Mobile-First Flexbox
+   ========================================================== */
+
+/* 1. Root Design Tokens */
+:root {
+  /* Color Palette (3 Colors Total) */
+  --color-primary: #1e3a8a;    /* Deep Navy: Headers, Nav, Primary Accents */
+  --color-secondary: #0d9488;  /* Teal: Interactive elements, highlights, hover */
+  --color-neutral-bg: #f8fafc; /* Crisp Off-White: Clean light background */
+  --color-text-main: #1f2937;  /* Charcoal Dark: High-contrast body text */
+  --color-white: #ffffff;
+
+  /* Typography (2 Fonts Total) */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing Scale */
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --radius: 8px;
+}
+
+/* 2. Global Resets & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  background-color: var(--color-neutral-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Base Headings & Hierarchy */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* 3. Header & Navigation (Mobile First) */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-sm);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stacked vertically on mobile */
+  gap: var(--space-sm);
+}
+
+nav a {
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.5rem;
+  display: block;
+}
+
+nav a:hover, nav a:focus {
+  background-color: var(--color-secondary);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+/* 4. Main Content Layout */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+/* Card / Section Container Styles */
+section, article {
+  background: var(--color-white);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Flexbox Content Grid (Stacked on Mobile) */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* 5. Accessible Forms Layout */
+form {
+  background: var(--color-white);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+}
+
+fieldset {
+  border: 1px solid #cbd5e1;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-md);
+}
+
+legend {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-md);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #94a3b8;
+  border-radius: calc(var(--radius) / 2);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--color-secondary);
+  border-color: transparent;
+}
+
+button[type="submit"] {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-primary);
+}
+
+/* 6. Media Fallback Styling */
+.media-wrapper {
+  margin-bottom: var(--space-md);
+}
+
+.media-fallback {
+  background-color: #e2e8f0;
+  padding: var(--space-sm);
+  border-left: 4px solid var(--color-primary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* 7. Footer Styles */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--space-md);
+  margin-top: auto;
+}
+
+/* ==========================================================
+   MEDIA QUERY: DESKTOP & LARGE SCREENS (min-width: 768px)
+   ========================================================== */
+@media (min-width: 768px) {
+  /* Expand Headings */
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+
+  /* Navigation transforms into horizontal bar */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  /* Content Grid transforms into multi-column Flexbox layout */
+  .content-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .content-grid > * {
+    flex: 1;
+  }
+
+  /* Form button becomes intrinsic width rather than full-width */
+  button[type="submit"] {
+    width: auto;
+  }
+}

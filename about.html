@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery - About Us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -16,45 +22,57 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-	<h1>About Us</h1>
+        <h1>About Us</h1>
     </header>
 
     <main>
         <section>
             <h2>Our Story</h2>
-            <p>Our mission has always been to provide wholesome and fresh good to our freinds, family and neighbors. What started out of our kitchen with the support of our community has grown to a place where we hope everyone feels welcome and leaves well fed.</p>
+            <p>Our mission has always been to provide wholesome and fresh food to our friends, family, and neighbors. What started out of our kitchen with the support of our community has grown to a place where we hope everyone feels welcome and leaves well fed.</p>
             
             <h3>A Message from Us</h3>
-            <audio controls>
-                <source src="bakery-welcome_c.mp3" type="audio/mpeg">
-		Your browser does not support the audio element. Audio transcript: "Here at North Star Bakery, every loaf starts before sunrise. We use simple ingredients, local grains, and time—because good bread can't be rushed. Stop by and taste the difference, or place a pre-order and we'll have something fresh waiting for you."
-            </audio>
-            </audio>
+            <div class="media-wrapper">
+                <audio controls>
+                    <source src="bakery-welcome_c.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="media-fallback">
+                    <strong>Audio Transcript:</strong> "Here at North Star Bakery, every loaf starts before sunrise. We use simple ingredients, local grains, and time—because good bread can't be rushed. Stop by and taste the difference, or place a pre-order and we'll have something fresh waiting for you."
+                </div>
+            </div>
         </section>
 
         <section>
             <h2>Behind the Scenes</h2>
-            <video controls width="600">
-                <source src="bakery-behind-scenes_c.mp4" type="video/mp4">
-		Your browser does not support the video tag. Video description: A behind-the-scenes video showing our bakers shaping artisan sourdough loaves and placing them into deck ovens before dawn.
-            </video>
+            <div class="media-wrapper">
+                <video controls style="max-width: 100%; height: auto;">
+                    <source src="bakery-behind-scenes_c.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="media-fallback">
+                    <strong>Video Description:</strong> A behind-the-scenes video showing our bakers shaping artisan sourdough loaves and placing them into deck ovens before dawn.
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Sourcing Philosophy</h2>
-            <p>We believe in empowering our community and making sure ingredients don't travel further than you do. Sourced from our local partners, all of our wheat and rye are sourced from nearby grain mills. </p>
-        </section>
+        <div class="content-grid">
+            <section>
+                <h2>Sourcing Philosophy</h2>
+                <p>We believe in empowering our community and making sure ingredients don't travel further than you do. Sourced from our local partners, all of our wheat and rye are sourced from nearby grain mills.</p>
+            </section>
 
-        <section>
-            <h2>Staff Highlights</h2>
-            <ul>
-                <li><strong>Ken Masters - Head Baker:</strong> 20 years of experience starting from home baking to bread expert.</li>
-                <li><strong>Chun Li - Sous Chef:</strong> Expert in apple pies, cinnamon rolls and berry tarts with 10 years of experience.</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Staff Highlights</h2>
+                <ul>
+                    <li><strong>Ken Masters - Head Baker:</strong> 20 years of experience starting from home baking to bread expert.</li>
+                    <li><strong>Chun Li - Sous Chef:</strong> Expert in apple pies, cinnamon rolls, and berry tarts with 10 years of experience.</li>
+                </ul>
+            </section>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2026 North Star Bakery</p>
     </footer>
-    </body>
+</body>
 </html>

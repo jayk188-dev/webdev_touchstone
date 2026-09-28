@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery - Contact Us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -16,7 +22,7 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-	<h1>Contact Us &amp; Pre-Order Request</h1>
+        <h1>Contact Us &amp; Pre-Order Request</h1>
     </header>
 
     <main>
@@ -24,8 +30,7 @@
             <h2>Location &amp; Store Hours</h2>
             <p><strong>Address:</strong> 123 Main Street</p>
             <p><strong>Phone:</strong> (123) 456-7890</p>
-            <p><strong>Hours:</strong></p>
-            <p> Mon-Sat, 9AM - 6PM, Closed Sunday </p>
+            <p><strong>Hours:</strong> Mon-Sat, 9AM - 6PM, Closed Sunday</p>
         </section>
 
         <section>
@@ -36,51 +41,52 @@
                 <fieldset>
                     <legend>Contact Information</legend>
 
-                    <label for="customer-name">Full Name:</label>
-                    <input type="text" id="customer-name" name="customer_name" required>
+                    <div class="form-group">
+                        <label for="customer-name">Full Name:</label>
+                        <input type="text" id="customer-name" name="customer_name" required>
+                    </div>
 
-                    <br><br>
-
-                    <label for="customer-email">Email Address:</label>
-                    <input type="email" id="customer-email" name="customer_email" required>
+                    <div class="form-group">
+                        <label for="customer-email">Email Address:</label>
+                        <input type="email" id="customer-email" name="customer_email" required>
+                    </div>
                 </fieldset>
-
-                <br>
 
                 <fieldset>
                     <legend>Order &amp; Inquiry Details</legend>
 
-                    <label for="request-type">Request Type:</label>
-                    <select id="request-type" name="request_type" required>
-                        <option value="">-- Select Option --</option>
-                        <option value="preorder">Pre-Order Pick-up</option>
-                        <option value="event">Catering / Event Inquiry</option>
-                        <option value="general">General Question</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="request-type">Request Type:</label>
+                        <select id="request-type" name="request_type" required>
+                            <option value="">-- Select Option --</option>
+                            <option value="preorder">Pre-Order Pick-up</option>
+                            <option value="event">Catering / Event Inquiry</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
 
-                    <br><br>
+                    <div class="form-group">
+                        <label for="pickup-date">Requested Pickup Date:</label>
+                        <input type="date" id="pickup-date" name="pickup_date" required>
+                    </div>
 
-                    <label for="pickup-date">Requested Pickup Date:</label>
-                    <input type="date" id="pickup-date" name="pickup_date" required>
+                    <div class="form-group">
+                        <label for="item-details">Item Details &amp; Quantity:</label>
+                        <textarea id="item-details" name="item_details" rows="4" placeholder="e.g. 3 Apple Pies, Rye Loaves, etc." required></textarea>
+                    </div>
 
-                    <br><br>
-
-                    <label for="item-details">Item Details &amp; Quantity:</label><br>
-                    <textarea id="item-details" name="item_details" rows="4" cols="40" placeholder="e.g. 3 Apple Pies, Rye Loaves, etc." required></textarea>
-
-                    <br><br>
-
-                    <label for="allergy-notes">Allergy Notes or Special Instructions (Optional):</label><br>
-                    <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" placeholder="Let us know about your sensitivities."></textarea>
+                    <div class="form-group">
+                        <label for="allergy-notes">Allergy Notes or Special Instructions (Optional):</label>
+                        <textarea id="allergy-notes" name="allergy_notes" rows="3" placeholder="Let us know about your sensitivities."></textarea>
+                    </div>
                 </fieldset>
-
-                <br>
 
                 <button type="submit">Submit Request</button>
             </form>
         </section>
     </main>
-<footer>
+
+    <footer>
         <p>&copy; 2026 North Star Bakery</p>
     </footer>
 </body>
