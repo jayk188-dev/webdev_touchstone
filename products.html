@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,42 +27,72 @@
         <h1>Our Fresh Baked Products</h1>
     </header>
 
-    <main class="content-grid">
-        <section>
-            <h2>Artisan Breads</h2>
-            <p>Handmade daily with locally sourced ingredients from our partners.</p>
-            
-            <figure>
-                <img src="bakery-signature-loaf_c.png" alt="Our signature rye loaf." style="max-width: 100%; height: auto;">
-                <figcaption><strong>Our Signature Loaf:</strong> Crispy crust with a soft, naturally leavened center.</figcaption>
-            </figure>
-
-            <ul>
-                <li><strong>Signature Country Sourdough:</strong> Slow-fermented sourdough ($7.00 - $9.00)</li>
-                <li><strong>Whole Grain Rye:</strong> Hearty rye bread made with stone-ground flour ($6.50 - $8.50)</li>
-                <li><strong>French Baguette:</strong> Classic crusty baguette baked fresh at 6 AM ($4.00 - $5.50)</li>
+    <main>
+        <!-- INTERACTIVE PLANNER SUMMARY BOX -->
+        <section class="planner-box">
+            <h2>Your Pre-Order Planner</h2>
+            <p>Select items below to build your custom order list. Items save automatically.</p>
+            <p><strong>Saved Items (<span id="fav-count">0</span>):</strong></p>
+            <ul id="fav-list">
+                <li>No items saved yet. Click below to add.</li>
             </ul>
+            <p><strong>Estimated Total: $<span id="fav-total">0.00</span></strong></p>
+            <p><a href="contact.html" style="font-weight: bold; text-decoration: underline;">Ready to Order? Click to Proceed to Contact Form</a></p>
         </section>
 
-        <section>
-            <h2>Pastries &amp; Morning Treats</h2>
-            <p>A grab-and-go breakfast for the busy commuter or the perfect complement to a slow weekend morning.</p>
-            <img src="bakery-feature-small_c.png" alt="Our assorted pastries" style="max-width: 100%; height: auto;">
-            <ul>
-                <li><strong>Butter Croissants:</strong> Flaky layered butter croissants ($3 - $4)</li>
-                <li><strong>Cinnamon Bun:</strong> Warm rolls topped with a cream cheese frosting ($5 - $6)</li>
-                <li><strong>Seasonal Muffins:</strong> Made with local seasonal fruits ($3 - $4)</li>
-            </ul>
-        </section>
+        <div class="content-grid">
+            <section>
+                <h2>Artisan Breads</h2>
+                <p>Handmade daily with locally sourced ingredients from our partners.</p>
+                
+                <figure>
+                    <img src="bakery-signature-loaf_c.png" alt="Our signature rye loaf." style="max-width: 100%; height: auto;">
+                    <figcaption><strong>Our Signature Loaf:</strong> Crispy crust with a soft, naturally leavened center.</figcaption>
+                </figure>
 
-        <section>
-            <h2>Cakes</h2>
-            <p>Custom cakes for birthdays, family gatherings, and community events.</p>
-            <ul>
-                <li><strong>Classic Vanilla:</strong> Light layer cake with vanilla buttercream ($20 - $25)</li>
-                <li><strong>Double Dark Chocolate:</strong> Rich decadent chocolate cake with chocolate buttercream ($20 - $25)</li>
-            </ul>
-        </section>
+                <ul>
+                    <li>
+                        <strong>Signature Country Sourdough ($8.00):</strong> Slow-fermented sourdough<br>
+                        <button class="btn-favorite" data-id="sourdough">♡ Add to Order List</button>
+                    </li>
+                    <li style="margin-top: 0.75rem;">
+                        <strong>Whole Grain Rye ($7.50):</strong> Hearty rye bread made with stone-ground flour<br>
+                        <button class="btn-favorite" data-id="rye">♡ Add to Order List</button>
+                    </li>
+                    <li style="margin-top: 0.75rem;">
+                        <strong>French Baguette ($4.50):</strong> Classic crusty baguette baked fresh at 6 AM<br>
+                        <button class="btn-favorite" data-id="baguette">♡ Add to Order List</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Pastries &amp; Morning Treats</h2>
+                <p>A grab-and-go breakfast for the busy commuter or the perfect complement to a slow weekend morning.</p>
+                <img src="bakery-feature-small_c.png" alt="Our assorted pastries" style="max-width: 100%; height: auto;">
+                <ul>
+                    <li>
+                        <strong>Butter Croissants ($3.50):</strong> Flaky layered butter croissants<br>
+                        <button class="btn-favorite" data-id="croissant">♡ Add to Order List</button>
+                    </li>
+                    <li style="margin-top: 0.75rem;">
+                        <strong>Cinnamon Bun ($5.50):</strong> Warm rolls topped with a cream cheese frosting<br>
+                        <button class="btn-favorite" data-id="cinnamon">♡ Add to Order List</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cakes</h2>
+                <p>Custom cakes for birthdays, family gatherings, and community events.</p>
+                <ul>
+                    <li>
+                        <strong>Classic Vanilla ($22.00):</strong> Light layer cake with vanilla buttercream<br>
+                        <button class="btn-favorite" data-id="vanilla">♡ Add to Order List</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>
